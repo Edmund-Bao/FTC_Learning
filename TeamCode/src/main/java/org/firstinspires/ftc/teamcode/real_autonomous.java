@@ -5,30 +5,28 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
+import org.firstinspires.ftc.teamcode.storage;
+
 @Autonomous(name = "Wautonomous")
-public class example2 extends LinearOpMode{
-    private static double leftBackMotorSpeed;
+public class real_autonomous extends LinearOpMode{
 
     private storage storage;
 
     @Override
     public void runOpMode() throws InterruptedException {
 
-        DcMotor rightFrontMotor = hardwareMap.dcMotor.get("rightFrontMotor");
-        DcMotor rightBackMotor = hardwareMap.dcMotor.get("rightBackMotor");
-        DcMotor leftFrontMotor = hardwareMap.dcMotor.get("leftFrontMotor");
-
         storage = new storage();
+        storage stoMotors = new storage();
 
         waitForStart();
         if(isStopRequested()) return;
 
-        while (opModeIsActive()) {
+        while (opModeIsActive() && !storage.stopMotors()) {
 
-            rightFrontMotor.setPower(leftBackMotorSpeed);
+            storage.runWithEncoderLeftF();
             storage.runWithEncoderLeftB();
-            rightBackMotor.setPower(0.5);
-            leftFrontMotor.setPower(0.5);
+            storage.runWithEncoderRightB();
+            storage.runWithEncoderRightF();
 
             storage.stopMotors();
 
