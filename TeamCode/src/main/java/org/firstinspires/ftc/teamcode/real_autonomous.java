@@ -8,8 +8,8 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import org.firstinspires.ftc.teamcode.storage;
 
 @Autonomous(name = "Wautonomous")
-public class real_autonomous extends LinearOpMode{
 
+public class real_autonomous extends LinearOpMode{
     private storage storage;
 
     @Override
