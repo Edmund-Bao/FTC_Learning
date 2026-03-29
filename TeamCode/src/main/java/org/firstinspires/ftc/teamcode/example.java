@@ -3,7 +3,6 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 @TeleOp(name = "WTeleOp")
 public class example extends LinearOpMode {
@@ -11,7 +10,7 @@ public class example extends LinearOpMode {
     private DcMotor rightFrontMotor; // motor define
     @Override
     public void runOpMode() throws InterruptedException {
-        DcMotor rightFrontMotor = hardwareMap.dcMotor.get("rightFrontMotor");
+        rightFrontMotor = hardwareMap.dcMotor.get("rightFrontMotor");
 
         waitForStart();
         if(isStopRequested()) return;
