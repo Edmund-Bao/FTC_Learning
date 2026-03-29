@@ -16,7 +16,6 @@ public class real_autonomous extends LinearOpMode{
     public void runOpMode() throws InterruptedException {
 
         storage = new storage();
-        storage stoMotors = new storage();
 
         waitForStart();
         if(isStopRequested()) return;
