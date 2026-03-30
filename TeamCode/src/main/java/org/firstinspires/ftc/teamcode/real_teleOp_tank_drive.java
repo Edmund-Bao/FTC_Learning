@@ -4,10 +4,8 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-import org.firstinspires.ftc.teamcode.storage;
-
 @TeleOp(name = "WTeleOp")
-public class real_teleOp extends LinearOpMode {
+public class real_teleOp_tank_drive extends LinearOpMode {
     private storage storage;
 
     private DcMotor rightFrontMotor;
@@ -38,7 +36,7 @@ public class real_teleOp extends LinearOpMode {
                 leftFrontMotor.setPower(storage.leftFrontMotorSpeed);
             }
 
-            if (gamepad1.left_stick_y > 0){
+            else if (gamepad1.left_stick_y > 0){
 
                 rightFrontMotor.setPower(storage.rightFrontMotorSpeed * -1.0);
                 rightBackMotor.setPower(storage.rightBackMotorSpeed * -1.0);
@@ -47,8 +45,7 @@ public class real_teleOp extends LinearOpMode {
             }
 
 
-            if (Math.abs(gamepad1.left_stick_y) > 0.05 || gamepad1.a) {
-
+            else {
                 rightFrontMotor.setPower(0);
                 rightBackMotor.setPower(0);
                 leftBackMotor.setPower(0);
