@@ -10,6 +10,7 @@ public class example extends LinearOpMode {
     private DcMotor rightFrontMotor; // motor define
     @Override
     public void runOpMode() throws InterruptedException {
+
         rightFrontMotor = hardwareMap.dcMotor.get("rightFrontMotor");
 
         waitForStart();
