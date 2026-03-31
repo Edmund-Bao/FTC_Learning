@@ -21,7 +21,7 @@ public class storage {
     }
     public void runWithEncoderLeftB() {
         leftBackMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        leftBackMotor.setTargetPosition(1000);
+        leftBackMotor.setTargetPosition(1000); // tick default is mm
         leftBackMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         leftBackMotor.setPower(0.5);
     }
