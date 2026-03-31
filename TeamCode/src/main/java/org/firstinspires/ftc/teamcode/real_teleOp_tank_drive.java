@@ -28,7 +28,7 @@ public class real_teleOp_tank_drive extends LinearOpMode {
 
         while (opModeIsActive()) {
 
-            if (gamepad1.left_stick_y < 0){
+            if (gamepad1.left_stick_y < 0.05){
 
                 rightFrontMotor.setPower(storage.rightFrontMotorSpeed);
                 rightBackMotor.setPower(storage.rightBackMotorSpeed);
@@ -36,7 +36,7 @@ public class real_teleOp_tank_drive extends LinearOpMode {
                 leftFrontMotor.setPower(storage.leftFrontMotorSpeed);
             }
 
-            else if (gamepad1.left_stick_y > 0){
+            else if (gamepad1.left_stick_y > 0.05){
 
                 rightFrontMotor.setPower(storage.rightFrontMotorSpeed * -1.0);
                 rightBackMotor.setPower(storage.rightBackMotorSpeed * -1.0);
