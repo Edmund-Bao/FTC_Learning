@@ -27,6 +27,8 @@ public class real_autonomous extends LinearOpMode{
             storage.runWithEncoderRightB();
             storage.runWithEncoderRightF();
 
+            wait(5000); // in milliseconds
+
             storage.stopMotors();
 
         }
