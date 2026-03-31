@@ -12,12 +12,11 @@ public class storage {
     private DcMotor leftFrontMotor;
     private DcMotor rightBackMotor;
     private DcMotor rightFrontMotor;
-    public boolean stopMotors() {
+    public void stopMotors() {
         rightFrontMotor.setPower(0);
         leftBackMotor.setPower(0);
         rightBackMotor.setPower(0);
         leftFrontMotor.setPower(0);
-        return true;
     }
     public void runWithEncoderLeftB() {
         leftBackMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);

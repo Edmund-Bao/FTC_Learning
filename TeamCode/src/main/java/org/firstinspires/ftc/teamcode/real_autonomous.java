@@ -20,7 +20,7 @@ public class real_autonomous extends LinearOpMode{
         waitForStart();
         if(isStopRequested()) return;
 
-        while (opModeIsActive() && !storage.stopMotors()) {
+        while (opModeIsActive() && !isStopRequested()) {
 
             storage.runWithEncoderLeftF();
             storage.runWithEncoderLeftB();
